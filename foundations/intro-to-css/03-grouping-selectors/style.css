@@ -1,1 +1,15 @@
 /* Add CSS Styling */
+#b1{
+    background-color:black;
+    color: white;
+    border: none;
+    padding: 2.5px 20px;
+    font-size: 28px;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    cursor:crosshair;
+}
+#b2{
+    background-color: yellow;
+     font-size: 28px;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
