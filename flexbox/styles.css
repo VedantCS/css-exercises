@@ -1,0 +1,113 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*
+  Cascade behavior
+Overrides universal selector
+The universal selector didn’t set border, width, or display, so no conflict
+
+Flex inside flex (important!)
+I have:
+.menu-container → display: flex
+.menu → display: flex
+
+So the layout is:
+.menu-container controls where .menu sits
+.menu controls how .date, .signup, .login are laid out
+So no cascade conflict here either.
+This works because CSS properties don’t cancel each other unless they target the same property on the same element. 
+
+*/
+.menu-container {
+  color: #fff;
+  height: 100px;
+  background-color: #5995DA;  /* Blue */
+  padding: 20px;
+  display:flex;
+  justify-content:center;
+}
+
+.menu {
+  border: 1px solid #fff;  /* For debugging */
+  width: 900px;
+  display:flex;
+  justify-content:space-between;
+}
+.links{ 
+  display:flex;
+  border:1px solid purple; 
+  justify-content:center;
+  align-items:flex-end;
+  
+}
+
+.login{
+  margin-left:10px;
+  align-items:center;
+}
+.header-container {
+  color: #5995DA;
+  background-color: #D6E9FE;
+  display: flex;
+  justify-content: center;
+}
+
+.header {
+  width: 900px;
+  height: 300px;
+  display: flex;
+  justify-content: space-between;
+  align-items:center;
+}
+ .subscribe, .social{
+   border: 1px solid #5995DA; 
+   align-self: flex-end;
+  }
+  .photo-grid-container {
+    color: #fff;
+    background-color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: row-reverse;
+    
+  }
+  .photo-grid{
+    display: flex;
+    width: 1080px;
+    flex-wrap: wrap;
+     justify-content:space-evenly;
+     flex-direction: row-reverse;
+
+  }
+  .photo-grid-item{
+    border: 3px solid palevioletred;
+  width: 300px;
+  height: 300px;
+}
+.last-item{
+order: -1;
+}
+.footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-item {
+  border: 1px solid #fff;
+  background-color: palevioletred;
+  height: 200px;
+  flex: 1;}
+
+.footer-one,
+.footer-three {
+  background-color: #5995DA;
+  flex: initial;
+  width: 300px;
+}
+
+.signup {
+  margin-left: auto;
+}
